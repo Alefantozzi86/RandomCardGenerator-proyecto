@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous" />
+    <script src="app.js"></script>
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,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"
+    />
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div class="card">
+        <span class="simbol-up">♠️</span>
+        <span class="number"> 7 </span>
+        <span class="simbol-down">♠️</span>
       </div>
+      <button onclik="button" id="button">Start!</button>
     </div>
   </body>
 </html>
