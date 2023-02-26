@@ -47,5 +47,5 @@ window.onload = function() {
 
   button.addEventListener("click", reload, false);
 
-  //setTimeout(reload, 2500);
+  setTimeout(reload, 2500);
 };
